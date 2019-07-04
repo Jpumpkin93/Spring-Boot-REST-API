@@ -10,9 +10,15 @@ spring:
   messages:
     basename: i18n/exception
     encoding: UTF-8
-
   jwt:
     secret: golepel@$amp
-
-
+  thymeleaf:
+    mode: HTML
+  datasource:
+    schema: classpath*:db/schema.sql
+    data: classpath*:db/data.sql
+  jpa:
+    hibernate:
+      ddl-auto: update
 debug: true
+

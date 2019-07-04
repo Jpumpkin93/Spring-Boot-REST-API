@@ -52,4 +52,7 @@ dependencies {
     
     testImplementation 'org.springframework.security:spring-security-test'
 
+    compile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.8.7'
+
+
 }

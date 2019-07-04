@@ -41,18 +41,18 @@ public class SignController {
         return responseService.getSingleResult(jwtTokenProvider.createToken(user.getUsername(), user.getRoles()));
     }
 
-    @ApiOperation(value = "가입", notes = "회원가입을 한다.")
-    @GetMapping(value = "/signup")
-    public CommonResult signup(@ApiParam(value = "회원ID : 이메일", required = true) @RequestParam String id,
-                               @ApiParam(value = "비밀번호", required = true) @RequestParam String password,
-                               @ApiParam(value = "이름", required = true) @RequestParam String name) {
-
-        userJpaRepo.save(User.builder()
-                .uid(id)
-                .password(passwordEncoder.encode(password))
-                .name(name)
-                .roles(Collections.singletonList("ROLE_USER"))
-                .build());
-        return responseService.getSuccessResult();
-    }
+//    @ApiOperation(value = "가입", notes = "회원가입을 한다.")
+//    @GetMapping(value = "/signUpCheck")
+//    public CommonResult signup(@ApiParam(value = "회원ID : 이메일", required = true) @RequestParam String id,
+//                               @ApiParam(value = "비밀번호", required = true) @RequestParam String password,
+//                               @ApiParam(value = "이름", required = true) @RequestParam String name) {
+//
+//        userJpaRepo.save(User.builder()
+//                .uid(id)
+//                .password(passwordEncoder.encode(password))
+//                .name(name)
+//                .roles(Collections.singletonList("ROLE_USER"))
+//                .build());
+//        return responseService.getSuccessResult();
+//    }
 }
