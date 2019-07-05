@@ -1,12 +1,12 @@
-
-CREATE TABLE Post (
-  number  INTEGER IDENTITY PRIMARY KEY,
-  title VARCHAR(30),
-  content  VARCHAR(30)
-);
-
-CREATE TABLE Comment (
-  cno  INTEGER IDENTITY PRIMARY KEY,
-  pno  INTEGER,
-  content  VARCHAR(30)
-);
+--
+-- CREATE TABLE Post (
+--   number  INTEGER IDENTITY PRIMARY KEY,
+--   title VARCHAR(30),
+--   content  VARCHAR(30)
+-- );
+--
+-- CREATE TABLE Comment (
+--   cno  INTEGER IDENTITY PRIMARY KEY,
+--   pno  INTEGER,
+--   content  VARCHAR(30)
+-- );
