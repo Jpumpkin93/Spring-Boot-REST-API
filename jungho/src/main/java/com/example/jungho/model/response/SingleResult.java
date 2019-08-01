@@ -1,7 +1,6 @@
 package com.example.jungho.model.response;
 
 
-
 import lombok.Getter;
 import lombok.Setter;
 

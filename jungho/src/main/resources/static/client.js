@@ -1,12 +1,10 @@
-
-
 $(function () {
 
     fetch('http://localhost:8080', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer '+ getJwtToken()
+            'Authorization': 'Bearer ' + getJwtToken()
         }
     });
 
@@ -46,14 +44,14 @@ $(function () {
         doLogin(formData);
     });
 
-    function doLogin(loginData){
+    function doLogin(loginData) {
         $.ajax({
             url: "/loginCheck",
             type: "POST",
-            data : JSON.stringify(loginData),
+            data: JSON.stringify(loginData),
             contentType: "application/json; charset=utf-8",
             dataType: "json",
-            success:function (data) {
+            success: function (data) {
                 alert(data["msg"]);
                 setJwtToken(data["data"]);
                 window.location = "/board";
@@ -77,17 +75,17 @@ $(function () {
         $.ajax({
             url: "/signUpCheck",
             type: "POST",
-            data : JSON.stringify(signData),
+            data: JSON.stringify(signData),
             contentType: "application/json; charset=utf-8",
             dataType: "json",
-            success:function (data) {
+            success: function (data) {
                 alert(JSON.stringify(data));
                 window.location = "/login";
             }
         });
     }
 
-    $("tr").click(function (){
+    $("tr").click(function () {
 
         var tr = $(this);
         var td = tr.children();
@@ -96,10 +94,10 @@ $(function () {
         $.ajax({
             url: "/postDetail",
             type: "GET",
-            data : "number=" + number,
+            data: "number=" + number,
             contentType: "charset=utf-8",
             headers: createAuthorizationTokenHeader(),
-            success:function (data) {
+            success: function (data) {
                 console.log(data);
             }
         });

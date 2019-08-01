@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html xmlns:th= "http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <head>
@@ -11,13 +11,15 @@
 <h4 align="center">PostDetail</h4>
 
 
-<h4><p th:text="'제목 : ' + ${post.title}" /></h4><br/>
-<h4><p th:text="'내용 : ' + ${post.content}" /></h4><br/>
+<h4><p th:text="'제목 : ' + ${post.title}"/></h4>
+<br/>
+<h4><p th:text="'내용 : ' + ${post.content}"/></h4>
+<br/>
 
 <a class="btn btn-primary " th:href="@{/board}" role="button">게시판으로</a>
 
 
-<table class = "table" style="margin-top:20px">
+<table class="table" style="margin-top:20px">
 
     <thead>
     <th>댓글</th>
@@ -34,7 +36,11 @@
 </body>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 <script src="client.js"></script>
 </html>

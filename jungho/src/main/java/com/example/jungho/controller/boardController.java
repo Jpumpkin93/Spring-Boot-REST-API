@@ -39,17 +39,17 @@ public class boardController {
 //        List<Comment> comments = post.getComments();
 //        model.addAttribute("comments", comments);
 
-        return "redirect:/postDetail/"+number;
+        return "redirect:/postDetail/" + number;
     }
 
     @GetMapping("/postDetail/{number}")
-    public ModelAndView postDetail(@PathVariable("number") String number){
+    public ModelAndView postDetail(@PathVariable("number") String number) {
         ModelAndView mav = new ModelAndView("postDetail");
 
         int pno = Integer.parseInt(number);
         Post post = postJpaRepo.findByNumber(pno);
 
-        mav.addObject("post",post);
+        mav.addObject("post", post);
         return mav;
     }
 

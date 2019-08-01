@@ -14,11 +14,10 @@ spring:
     secret: golepel@$amp
   thymeleaf:
     mode: HTML
-  datasource:
-    schema: classpath*:db/schema.sql
-    data: classpath*:db/data.sql
-  jpa:
-    hibernate:
-      ddl-auto: update
 debug: true
 
+
+
+  sms.serviceid = /sms/v2/services/ncp:sms:kr:255444522560:bankbit/messages
+  sms.accesskey = wTottmhcykh5RKYvc2z6
+  sms.secretkey = dDIu2LK1JOhBp9Kv4YNWRYsNNPmWLAPalvXZWKbD
